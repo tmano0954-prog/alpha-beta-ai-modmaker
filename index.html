@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Beta and Version AI Modmaker</title>
+    <!-- This line links your HTML to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-box">
+    <h1>Alpha Beta and Version AI Modmaker</h1>
+    
+    <div class="field">
+        <label for="modVersion">Choose Game Version:</label>
+        <select id="modVersion">
+            <option value="Alpha 0.6.0">Alpha 0.6.0 (Earliest ModPE)</option>
+            <option value="Alpha 0.14.0">Alpha 0.14.0 (BlockLauncher Peak)</option>
+            <option value="Alpha 0.16.0">Alpha 0.16.0 (Late Legacy)</option>
+            <option value="Beta 0.8.0">Beta 0.8.0 (First Testing Builds)</option>
+            <option value="Beta 1.1.0">Beta 1.1.0 (End of JS Era)</option>
+        </select>
+    </div>
+
+    <div class="field">
+        <label for="modPrompt">What should the mod do?</label>
+        <textarea id="modPrompt" placeholder="Example: Make a 4-block-wide custom bus asset..."></textarea>
+    </div>
+    
+    <button onclick="processSafeMod()">Create Safe Mod Script</button>
+
+    <div id="outputArea" class="safe-output">
+        <label style="color: #55ffff;">Your Safe ModPE File:</label>
+        <pre><code id="codeView"></code></pre>
+    </div>
+</div>
+
+<!-- This line links your HTML to your JavaScript file -->
+<script src="script.js"></script>
+</body>
+</html>
